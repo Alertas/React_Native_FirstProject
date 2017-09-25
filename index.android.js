@@ -9,44 +9,29 @@ import {
   AppRegistry,
   StyleSheet,
   Text,
-  View
+  View, 
+  Alert, 
+  Button
 } from 'react-native';
 
 class FirstProject extends Component {
-  render() {
-    return (
-      <BookDisplay book= "React Native in Action" />
-      )
+  onPressButton() {
+    Alert.alert('Tu mane paspaudei')
   }
-}
-class BookDisplay extends Component {
+  changeColor() {
+    
+  }
   render() {
     return (
       <View>
-      <Text>{ this.props.book }</Text>
+        <Button onPress={this.onPressButton} title="Mygtukas" color="red"/>
+        <Button onPress={this.onPressButton} title="Mygtukas" color="green"/>
       </View>
-      )
+    );
   }
 }
 
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F5FCFF',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-  },
-  instructions: {
-    textAlign: 'center',
-    color: '#333333',
-    marginBottom: 5,
-  },
-});
+
 
 AppRegistry.registerComponent('FirstProject', () => FirstProject);
