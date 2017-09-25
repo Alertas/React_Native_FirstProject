@@ -26,6 +26,7 @@ class FirstProject extends Component {
       <View>
         <Button onPress={this.onPressButton} title="Mygtukas" color="red"/>
         <Button onPress={this.onPressButton} title="Mygtukas" color="green"/>
+        <Button onPress={this.onPressButton} title="Mygtukas" color="yellow"/>
       </View>
     );
   }
